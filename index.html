@@ -8,16 +8,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet"" href="index.css"/>
+        <script src="index.js" defer></script>
         <title>Password Generator</title>
     </head>
     <body>
         <main>
             <h1>Generate a <span>random password</span></h1>
             <p>Never use an insecure password again.</p>
-            <button>Generate passwords</button>
+            <button onclick="generatePassword()">Generate passwords</button>
             <div>
-                <p>***************</p>
-                <p>***************</p>
+                <p id="generated-password1">***************</p>
+                <p id="generated-password2">***************</p>
             </div>
 
         </main>

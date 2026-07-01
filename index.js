@@ -18,5 +18,23 @@ const characterVariable = [
   ',', '.', '<', '>', '?', '/', '`', '~', '\\'
 ];
 
+const generatedPassword1 = document.getElementById('generated-password1');
+const generatedPassword2 = document.getElementById('generated-password2');
 
-console.log(characterVariable[2])
+function generatePassword() {
+    let password1 = "";
+    let password2 = "";
+    const passwordLength = 15;
+    
+    for (let i = 0; i < passwordLength; i++) {
+
+        let randomIndex1 = Math.floor(Math.random() * characterVariable.length);
+        password1 += characterVariable[randomIndex1];
+
+        let randomIndex2 = Math.floor(Math.random() * characterVariable.length);
+        password2 += characterVariable[randomIndex2];
+    }
+
+    generatedPassword1.textContent = password1;
+    generatedPassword2.textContent = password2;
+}
